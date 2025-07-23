@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title> Simulador Bancario</title>
+</head>
+<body>
+    <h2>Simulador de Conta Bancaria</h2>
+    <p> Saldo atual: <span id=" saldo"> 1000</span> reais</p>
+    <label> Valor do saque: <input type="number" id="saque"></label><br><br>
+    <button onclick="sacar()">Sacar</button>
+    <p id="mensagem"></p>
+
+    <script>
+        let saldo = 1000;
+
+        class SaldoInsuficienteError extends Error {
+            constructor(message) {
+                super(message);
+                this.name = "SaldoInsuficienteError";
+ }
+        }
+
+        function sacar(){
+            const valor = parseFloat(document.getElementById)
+        }
+    </script>
+</body>
+</html> html>
