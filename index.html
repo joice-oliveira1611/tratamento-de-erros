@@ -17,12 +17,31 @@
         class SaldoInsuficienteError extends Error {
             constructor(message) {
                 super(message);
-                this.name = "SaldoInsuficienteError";
+             this.name = "SaldoInsuficienteError";
  }
         }
+        
 
-        function sacar(){
-            const valor = parseFloat(document.getElementById)
+        function sacar() {
+            const valor = parseFloat(document.getElementById("saque").value);
+            const mensagem = document.getElementById("mensagem");
+
+            try {
+                if (valor <= 0){
+                    throw new Error(" O valor do saque deve ser positivo.");
+                }
+
+                saldo = valor;
+                document.getElementById("saldo").innerText = saldo;
+                mensagem.innerText = "Saque realizado com sucesso!";
+            } catch (erro) {
+                mensagem.innerText = erro.message;
+            }
+        }
+    </script>
+</body>
+</html>
+
         }
     </script>
 </body>
